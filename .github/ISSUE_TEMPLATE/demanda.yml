@@ -1,0 +1,50 @@
+name: Demanda
+description: Funcionalidade nova ou mudança de comportamento pedida
+title: "[demanda] "
+labels: ["tipo: feature"]
+projects: ["Pombo-Correio/2"]
+body:
+  - type: textarea
+    id: objetivo
+    attributes:
+      label: O que precisa existir
+      description: Escreva do ponto de vista de quem usa, não da implementação.
+      placeholder: A atendente precisa ver, no perfil da cliente, os serviços já realizados com data e valor.
+    validations:
+      required: true
+  - type: textarea
+    id: porque
+    attributes:
+      label: Por que
+      description: Que problema real isso resolve. Se veio de reunião, cite a data.
+    validations:
+      required: true
+  - type: textarea
+    id: aceite
+    attributes:
+      label: Como saber que ficou pronto
+      description: Um critério verificável por linha.
+      value: |
+        - [ ]
+        - [ ]
+    validations:
+      required: true
+  - type: dropdown
+    id: escopo
+    attributes:
+      label: Onde encosta
+      multiple: true
+      options: [Backend, WebApp, Docs, Claude, Infra]
+    validations:
+      required: true
+  - type: checkboxes
+    id: travas
+    attributes:
+      label: Travas que continuam valendo
+      description: Marque as que esta demanda toca. Nenhuma delas é negociável.
+      options:
+        - label: Cria ou altera tabela — todo índice único é composto com `Tenant`
+        - label: Toca dado do ERP — o produto não edita, só lê
+        - label: Toca consentimento — a sincronização nunca escreve nele
+        - label: Toca envio — passa por `IMessagingProvider`, nunca direto
+        - label: Grava log — nenhum dado pessoal em log

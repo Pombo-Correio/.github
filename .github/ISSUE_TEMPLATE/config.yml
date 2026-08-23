@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Estado do projeto e próximos passos
+    url: https://github.com/Pombo-Correio/Pombo.Correio.Docs/blob/main/ESTADO-E-PROXIMOS-PASSOS.md
+    about: Onde a execução parou e qual é o passo atual.
+  - name: Decisões de arquitetura
+    url: https://github.com/Pombo-Correio/Pombo.Correio.Docs/tree/main/decisoes
+    about: Antes de propor mudança estrutural, veja se já foi decidido.

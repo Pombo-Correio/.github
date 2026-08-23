@@ -1,0 +1,32 @@
+name: Dívida técnica
+description: Atalho consciente que precisa ficar registrado com dono
+title: "[dívida] "
+labels: ["tipo: divida"]
+projects: ["Pombo-Correio/2"]
+body:
+  - type: textarea
+    id: atalho
+    attributes:
+      label: Que atalho foi tomado
+    validations:
+      required: true
+  - type: textarea
+    id: porque
+    attributes:
+      label: Por que foi aceitável na hora
+    validations:
+      required: true
+  - type: textarea
+    id: custo
+    attributes:
+      label: O que dói se ficar assim
+      description: Se a resposta for "nada", isto não é dívida — é decisão. Feche a issue.
+    validations:
+      required: true
+  - type: input
+    id: gatilho
+    attributes:
+      label: Quando isso deixa de ser aceitável
+      placeholder: Quando entrar o segundo salão / quando a base passar de 50 mil atendimentos
+    validations:
+      required: true

@@ -1,0 +1,48 @@
+name: Defeito
+description: Alguma coisa se comporta de forma errada
+title: "[defeito] "
+labels: ["tipo: defeito"]
+projects: ["Pombo-Correio/2"]
+body:
+  - type: textarea
+    id: esperado
+    attributes:
+      label: O que era para acontecer
+    validations:
+      required: true
+  - type: textarea
+    id: aconteceu
+    attributes:
+      label: O que aconteceu
+    validations:
+      required: true
+  - type: textarea
+    id: reproducao
+    attributes:
+      label: Como reproduzir
+      value: |
+        1.
+        2.
+        3.
+    validations:
+      required: true
+  - type: dropdown
+    id: onde
+    attributes:
+      label: Onde apareceu
+      options: [Local, CI, Homologação, Produção]
+    validations:
+      required: true
+  - type: textarea
+    id: evidencia
+    attributes:
+      label: Evidência
+      description: Log, print ou trecho de resposta. **Remova telefone, e-mail e nome de pessoa antes de colar.**
+  - type: checkboxes
+    id: gravidade
+    attributes:
+      label: Gravidade
+      options:
+        - label: Vaza dado entre salões, ou expõe dado pessoal
+        - label: Faz mensagem sair para quem não devia receber
+        - label: Perde dado gravado

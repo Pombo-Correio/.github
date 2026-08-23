@@ -1,0 +1,37 @@
+name: Pendência de negócio
+description: Depende de resposta da cliente, do fornecedor do ERP ou do jurídico
+title: "[pendência] "
+labels: ["tipo: pendencia", "bloqueado"]
+projects: ["Pombo-Correio/1"]
+body:
+  - type: input
+    id: codigo
+    attributes:
+      label: Código na documentação
+      description: O P-XX, D-XX ou M-AX correspondente, se já existir.
+      placeholder: P-45
+  - type: textarea
+    id: pergunta
+    attributes:
+      label: A pergunta, como será feita
+      description: Escreva do jeito que dá para mandar por mensagem, sem jargão nosso.
+    validations:
+      required: true
+  - type: dropdown
+    id: quem
+    attributes:
+      label: De quem depende
+      options: [Cliente, Fornecedor do ERP, Jurídico, Provedor de mensageria]
+    validations:
+      required: true
+  - type: textarea
+    id: enquanto
+    attributes:
+      label: O que o código faz enquanto não há resposta
+      description: Sempre existe um comportamento provisório. Diga qual é, para não virar surpresa.
+    validations:
+      required: true
+  - type: textarea
+    id: impacto
+    attributes:
+      label: O que trava
