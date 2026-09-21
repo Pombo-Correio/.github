@@ -46,5 +46,5 @@ body:
         - label: Cria ou altera tabela — todo índice único é composto com `Tenant`
         - label: Toca dado do ERP — o produto não edita, só lê
         - label: Toca consentimento — a sincronização nunca escreve nele
-        - label: Toca envio — passa por `IMessagingProvider`, nunca direto
+        - label: Toca envio — passa por `IProvedorDeMensagens`, nunca direto
         - label: Grava log — nenhum dado pessoal em log
